@@ -5,8 +5,9 @@ Contact Us
 {% endblock title %}
 
 {% block body %}
-<div class="container mb-3 style=">
-    <form method="post" action="/contacts" class="btn btn-light position-absolute top-50 start-50 translate-middle w-100 p-3">
+<div class="container mb-5">
+    <form method="post" action="/contacts" class="btn btn-light position-absolute top-50 start-50 translate-middle
+    w-100 p-0.5">
        {% csrf_token %}
         <div class="form-group py-3">
             <label for="name">Name</label>

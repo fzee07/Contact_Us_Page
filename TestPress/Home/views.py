@@ -4,6 +4,7 @@ from django.shortcuts import render
 
 from Home.models import Contact
 
+from django.contrib import messages
 
 # Create your views here.
 def index(request):
@@ -36,6 +37,7 @@ def contacts(request):
                           email=request.POST.get('email'),
                           desc=request.POST.get('desc'), date=datetime.today())
         contact.save()
+        messages.success(request, 'We have received your message successfully, we will get back to you soon.')
 
     return render(request, 'contact.html')
     # return HttpResponse("This is Contacts Page")
